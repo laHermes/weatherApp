@@ -3,7 +3,7 @@ class UI{
 constructor(){
     this.location = document.getElementById('w_location');
     this.description = document.getElementById('w_description');
-    this.temeprature = document.getElementById('w_temeprature');
+    this.temperature = document.getElementById('w_temperature');
     this.humidity = document.getElementById('w_humidity');
     this.pressure = document.getElementById('w_pressure');
     this.feelsLike = document.getElementById('w_feelsLike');
@@ -24,7 +24,7 @@ const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
 this.location.innerHTML = `<i class="fas fa-map-marked-alt"></i> ${weather.name}, ${weather.sys.country}`;
 this.description.textContent = desc.toUpperCase();
-this.temeprature.textContent = `${temp.toFixed(0)} °C`;
+this.temperature.textContent = `${temp.toFixed(0)} °C`;
 this.humidity.innerHTML = `<i class="fas fa-ad"></i> ${weather.main.humidity}%`;
 this.feelsLike.textContent = `Feels like: ${flsLike.toFixed(0)} °C`;
 this.pressure.textContent =`Pressure: ${weather.main.pressure} hPa`;
