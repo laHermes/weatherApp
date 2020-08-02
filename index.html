@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css" />
 </head>
+
 <body>
   <div id="navbar">
     <div class="navbar__icon-holder">
@@ -36,19 +38,24 @@
         <h3 class="w-heading">Weather Report</h3>
       </div>
       <hr>
-      <h1 class="card__header-location" id="w_location">An error has occurred, please enter the correct name of the city
-      </h1>
-      <div class="card__icon-holder">
-        <img id="w_icon" />
-        <h3 class="card__header-description" id="w_description"></h3>
+      <div class="wrapper">
+        <h1 class="card__header-location" id="w_location">An error has occurred, please enter the correct name of the
+          city
+        </h1>
+        <h3 class="card__header-temperature" id="w_temperature"></h3>
+        <div class="card__icon-holder">
+          <img id="w_icon" />
+          <div class="descriptor">
+            <h3 class="card__header-description" id="w_description"></h3>
+          </div>
+        </div>
+        <ul class="card__list" id="w_list">
+          <li class="card__list-item" id="w_humidity"></li>
+          <li class="card__list-item" id="w_pressure"></li>
+          <li class="card__list-item" id="w_feelsLike"></li>
+          <li class="card__list-item" id="w_wind"></li>
+        </ul>
       </div>
-      <h3 class="card__header-temperature" id="w_temperature"></h3>
-      <ul class="card__list" id="w_list">
-        <li class="card__list-item" id="w_humidity"></li>
-        <li class="card__list-item" id="w_pressure"></li>
-        <li class="card__list-item" id="w_feelsLike"></li>
-        <li class="card__list-item" id="w_wind"></li>
-      </ul>
       <div id="map"></div>
     </div>
     </div>
@@ -61,4 +68,5 @@
   <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>

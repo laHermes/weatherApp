@@ -3,7 +3,7 @@ class Storage {
     this.city = "";
     this.cityDefault = "niš";
   }
-
+//GET CITY FROM LOCAL STORAGE
   getCity() {
     if (localStorage.getItem("city") === "") {
       this.city = this.cityDefault;
@@ -14,7 +14,7 @@ class Storage {
       city: this.city,
     };
   }
-
+//SET CITY IN LOCAL STORAGE
   setCity(cityName) {
     localStorage.setItem("city", cityName);
   }

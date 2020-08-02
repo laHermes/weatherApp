@@ -13,7 +13,6 @@ body {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
     line-height: 2rem;
-
 }
 
 #navbar {
@@ -23,8 +22,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    padding: 10px;
+    padding: 1rem;
 }
 
 .navbar__buttons {
@@ -40,24 +38,38 @@ li {
     list-style: none;
 }
 
+.card__list {
+    margin-top: 1.6rem;
+}
+
+.card__list>li {
+
+    font-size: 1.6rem;
+    padding: 1px;
+    margin: 5px 0;
+
+}
+
 .navbar__buttons-item {
     font-weight: 700;
     list-style: none;
     margin: 0 auto;
     display: inline-block;
     color: white;
-
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 110rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar__icon-holder {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 #logo {
@@ -68,66 +80,77 @@ li {
     color: white;
     padding: 1.5rem;
     font-size: 1.8rem;
-
 }
 
 
-#form{
-
+#form {
     display: flex;
     flex-direction: row;
+}
 
+#form_city {
+    line-height: 2rem;
+    border: 6px solid white;
+    border-radius: 3px 0px;
 
 }
 
-#form_city{
-line-height: 2rem;
-border: 6px solid white;
-border-radius: 3px 0px;
-
+#form_submit {
+    line-height: 2rem;
+    padding: 3px;
+    background-color: white;
+    border: 3px solid white;
+    margin-left: -5px;
+    border-radius: 3px 0;
 }
 
-#form_submit{
-line-height: 2rem;
-padding: 3px;
-background-color: white;
-border: 3px solid white;
-margin-left: -5px;
-border-radius: 3px 0;
+
+#search_icon {
+    color: rgb(0, 96, 185);
 }
 
-#search_icon{
 
-color: rgb(0, 96, 185);
-
-}
-#form_submit:hover{
-
-border: 6px dotted red;
-
+.heading {
+    margin: 15px 0;
+    padding: 10px;
 }
 
-.heading{
-margin: 15px 0;
-padding: 10px;
-
-}
-.w-heading{
-font-size: 2.4rem;
+.w-heading {
+    font-size: 2.4rem;
     font-weight: 500;
 }
 
+.descriptor {
 
-#map{
+    text-align: center;
+
+}
+
+
+#map {
     height: 50rem;
     width: 110rem;
     margin: 2.5rem 0;
 }
 
-footer{
-
-background-color: rgb(0, 96, 185);
+footer {
+    background-color: rgb(0, 96, 185);
     width: 100%;
-    height: 7rem;
-    margin-bottom: 0;
+    height: 15rem;
+
+}
+
+.wrapper {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#w_location,
+#w_temperature {
+    font-size: 2.4rem;
+    color: rgb(32, 32, 32);
 }

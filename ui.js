@@ -25,18 +25,21 @@ const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 this.location.innerHTML = `<i class="fas fa-map-marked-alt"></i> ${weather.name}, ${weather.sys.country}`;
 this.description.textContent = desc.toUpperCase();
 this.temperature.textContent = `${temp.toFixed(0)} °C`;
-this.humidity.innerHTML = `<i class="fas fa-ad"></i> ${weather.main.humidity}%`;
+this.humidity.innerHTML = `<i class="fas fa-tint"></i> ${weather.main.humidity}%`;
 this.feelsLike.textContent = `Feels like: ${flsLike.toFixed(0)} °C`;
-this.pressure.textContent =`Pressure: ${weather.main.pressure} hPa`;
-this.wind.textContent = `Wind speed: ${weather.wind.speed} m/s`;
+this.pressure.innerHTML =`<i class="fas fa-tachometer-alt"></i>: ${weather.main.pressure} hPa`;
+this.wind.innerHTML = `<i class="fas fa-wind"></i>: ${weather.wind.speed} m/s`;
 this.icon.setAttribute('src', iconUrl);
 
-let mymap = L.map('map').setView([weather.coord.lat, weather.coord.lon], 13);
+
+//LEAFLET JS MAP
+let myMap = L.map('map').setView([weather.coord.lat, weather.coord.lon], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
-L.marker([weather.coord.lat, weather.coord.lon]).addTo(mymap);
+}).addTo(myMap);
+
+L.marker([weather.coord.lat, weather.coord.lon]).addTo(myMap);
 }
 
 }
